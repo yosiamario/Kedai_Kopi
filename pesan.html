@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Pesan - Kedai Kopi Ciamik</title>
+</head>
+
+<body>
+  <header>
+    <h1>Kedai Kopi Ciamik</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="pesan.html">Pesan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Form pemesanan</h2>
+
+    <form method="get" action="pesan.html">
+      <p>
+        <label for="nama">Nama pemesan</label><br>
+        <input type="text" id="nama" name="nama" required>
+      </p>
+
+      <p>
+        <label for="wa">Nomor WhatsApp</label><br>
+        <input type="tel" id="wa" name="wa" required>
+      </p>
+
+      <p>
+        <label for="menu">Pilihan menu</label><br>
+        <select id="menu" name="menu">
+          <optgroup label="Kopi">
+            <option value="espresso">Espresso</option>
+            <option value="americano">Americano</option>
+            <option value="kopi-susu-gula-aren">Kopi Susu Gula Aren</option>
+          </optgroup>
+          <optgroup label="Non Kopi">
+            <option value="matcha-latte">Matcha Latte</option>
+            <option value="cokelat-panas">Cokelat Panas</option>
+            <option value="teh-lemon">Teh Lemon</option>
+          </optgroup>
+        </select>
+      </p>
+
+      <p>
+        <label for="jumlah">Jumlah</label><br>
+        <input type="number" id="jumlah" name="jumlah" min="1" max="10" value="1">
+      </p>
+
+      <fieldset>
+        <legend>Cara ambil</legend>
+        <div class="pilihan-cara">
+          <input type="radio" id="ambil" name="cara" value="ambil" checked>
+          <label for="ambil">Ambil di tempat</label>
+          <input type="radio" id="antar" name="cara" value="antar">
+          <label for="antar">Diantar</label>
+        </div>
+      </fieldset>
+
+      <p>
+        <label for="catatan">Catatan</label><br>
+        <textarea id="catatan" name="catatan" rows="4" cols="40"></textarea>
+      </p>
+
+      <button type="submit">Kirim</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Alamat: Jl. Sawah Besar VII</p>
+    <p>Jam buka: Senin - Minggu, 09.00 - 22.00 WIB</p>
+  </footer>
+</body>
+
+</html>
